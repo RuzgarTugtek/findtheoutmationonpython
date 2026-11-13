@@ -1,0 +1,23 @@
+name: Website Uptime Monitor Tests
+
+on:
+  push:
+    paths:
+      - "projects/website-uptime-monitor/**"
+      - ".github/workflows/uptime-monitor-tests.yml"
+  pull_request:
+    paths:
+      - "projects/website-uptime-monitor/**"
+      - ".github/workflows/uptime-monitor-tests.yml"
+
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run tests without network
+        working-directory: projects/website-uptime-monitor
+        run: python -m unittest discover -s tests -v
