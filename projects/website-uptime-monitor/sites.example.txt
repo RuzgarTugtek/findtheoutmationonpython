@@ -1,3 +1,0 @@
-# Use websites you own or have permission to check.
-https://example.com
-https://www.python.org
