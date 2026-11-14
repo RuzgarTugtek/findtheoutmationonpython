@@ -1,19 +1,14 @@
 # Python Automation Projects
 
-A collection of Python automation experiments.
+Python scripts and experiments for automated video creation.
 
-## Projects
+## Existing scripts
 
-### [Website Uptime Monitor](projects/website-uptime-monitor)
+The existing video-automation work remains at the repository root in `main.py`, `config.py`, and `modules/`, with related assets.
 
-Simple HTTP(S) availability checker with response-time measurements, SQLite history, configurable monitoring intervals, JSON Lines output, and mocked automated tests. Python 3.10+; standard library only.
+## Standalone project
 
-~~~bash
-cd projects/website-uptime-monitor
-python -m uptime_monitor --url https://example.com
-python -m unittest discover -s tests -v
-~~~
+The Website Uptime Monitor has moved to its own repository:
+[Website Uptime Monitor](https://github.com/RuzgarTugtek/Website-Uptime-Monitor).
 
-### Video automation scripts
-
-Earlier scripts for automated video production are at the repository root (main.py, config.py and modules/). The uptime monitor is independent of these scripts.
+The standalone project now includes HTTP checks, SQLite history, historical uptime reporting, automated tests, and a dedicated README.
